@@ -59,7 +59,7 @@
                 name="search"
                 class="search"
                 value=""
-                placeholder="Marseille, France"
+                placeholder="Ville, Pays"
               />
               <button
                 type="submit"
@@ -68,6 +68,13 @@
                 value="Rechercher"
               >
                 Rechercher
+              </button>
+              <button 
+              type="submit"
+              name="submit"
+              class="submit-mobile"
+              value="Rechercher">
+                <img src="/images/logo/loupebutton.png" alt="loupe-logo-button">
               </button>
             </div>
           </form>
@@ -83,8 +90,6 @@
                   <img src="/images/logo/family.png" alt="" />
                   <h3>Familial</h3>
                 </button>
-              </div>
-              <div class="filter-button">
                 <button class="filter">
                   <img src="/images/logo/romantique.png" alt="" />
                   <h3>Romantique</h3>
@@ -268,6 +273,7 @@
                 </article>
               </a>
             </div>
+            <button class="button-afficherPlus">Afficher plus</button>
           </section>
           <section class="populaires">
             <div class="populaires-title">
@@ -360,9 +366,88 @@
               </a>
             </div>
           </section>
+          <div class="activites">
+            <!-- rename all title class -->
+            <div class="activites-title">
+              <h2 class="section-title">Activités à Marseille</h2>
+            </div>
+            <div class="activites-cards">
+                <a href="#">
+                  <article class="act-card">
+                    <img
+                      src="./images/activites/reno-laithienne.jpg"
+                      alt="Image du vieux port"
+                    />
+                    <div class="card-content">
+                      <div class="card-txt">
+                        <h3 class="card-title">Vieux-Port</h3>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+                <a href="#">
+                    <article class="act-card">
+                      <img
+                        src="./images/activites/paul-hermann.jpg"
+                        alt="Image du vieux port"
+                      />
+                      <div class="card-content">
+                        <div class="card-txt">
+                          <h3 class="card-title">Fort de Pomègues</h3>
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                  <a href="#">
+                    <article class="act-card">
+                      <img
+                        src="./images/activites/kilyan-sockalingum.jpg"
+                        alt="Image du vieux port"
+                      />
+                      <div class="card-content">
+                        <div class="card-txt">
+                          <h3 class="card-title">Parc national des Calanques</h3>
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                  <a href="#">
+                    <article class="act-card">
+                      <img
+                        src="./images/activites/florian-wehde.jpg"
+                        alt="Image du vieux port"
+                      />
+                      <div class="card-content">
+                        <div class="card-txt">
+                          <h3 class="card-title">Notre-Dame-de-la-Garde</h3>
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+            </div>
         </div>
+        
       </main>
-      <footer></footer>
+      <footer>
+        <section class="footer-container">
+            <div class="footer-column">
+                <h3>À propos</h3>
+                <a href="#">Fonctionnement du site</a>
+                <a href="#">Conditions générales</a>
+                <a href="#">Données et confidentialité</a>
+        </div>
+            <div class="footer-column">
+                <h3>Nos hébergements</h3>
+                <a href="#">Charte qualité</a>
+                <a href="#">Proposer votre hôtel</a>
+            </div>
+            <div class="footer-column">
+                <h3>Assistance</h3>
+                <a href="#">Centre d'aide</a>
+                <a href="#">Nous contacter</a>
+            </div>
+        </section>
+      </footer>
     </div>
   </body>
 </html>

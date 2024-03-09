@@ -80,7 +80,6 @@ header .left-container .logo-booki {
 }
 
 .headline h2 {
-  height: 26px;
   margin-bottom: 0px;
   font-weight: 700;
 }
@@ -104,13 +103,15 @@ header .left-container .logo-booki {
 .repere-container {
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 13px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   background: #f2f2f2;
 }
 
-img {
+.search-bar input {
+  border-top-color: #f2f2f2;
+  border-bottom-color: #f2f2f2;
 }
 
 .search {
@@ -122,14 +123,18 @@ img {
   border-right: none;
 }
 
-.info-group .search-bar button {
+.info-group .search-bar .submit {
   background-color: #0065fc; /* Right part background color */
   color: #fff;
-  padding: 15px 16px 15px 16px;
+  padding: 16px 16px 16px 16px;
   border: none;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   cursor: pointer;
+}
+
+.info-group .search-bar .submit-mobile {
+  display: none;
 }
 
 /*  /////// FILTER \\\\\\\\   */
@@ -222,7 +227,7 @@ a {
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .hebergements-and-populaires section {
@@ -255,10 +260,6 @@ a {
   flex-wrap: wrap;
 }
 
-.hebergements-cards .card {
-  margin-top: 33px;
-}
-
 .hebergements-cards a {
   flex-basis: calc((100% - 60px) / 3);
 }
@@ -289,7 +290,13 @@ a {
 .hebergements-cards .card-rating {
   margin-bottom: 5px;
 }
-*/
+
+.hebergements-and-populaires h3 {
+  display: flex;
+  align-items: start;
+  font-family: "Raleway";
+  font-weight: 700;
+}
 
 /****** Populaires ***********/
 .populaires {
@@ -326,6 +333,7 @@ a {
 .populaires-cards .card-title {
   margin-top: 10px;
   margin-bottom: 4px;
+  font-weight: 700;
 }
 
 .populaires-cards .card-subtitle {
@@ -336,6 +344,88 @@ a {
   margin-bottom: 5px;
 }
 
+.button-afficherPlus {
+  display: flex;
+  font-family: "Raleway";
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/****** Activités ***********/
+.activites {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 30px 30px;
+}
+
+.activites .activites-title h2 {
+  font-family: "Raleway";
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+
+.activites-cards {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  flex-wrap: wrap;**********
+}
+
+.activites-cards a {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
+.act-card {
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.act-card img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  height: 380px;
+}
+.act-card h3 {
+  font-family: "Raleway";
+  font-weight: 700;
+  padding: 0px 20px 20px 20px;
+}
+/* ///////  FOOTER \\\\\\\ */
+
+.footer-container {
+  display: flex;
+  background-color: var(--main-bg-color);
+  padding-left: 20px;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer-container .footer-column {
+  flex-basis: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-container .footer-column h3 {
+  font-family: "Raleway";
+  font-weight: 700;
+}
+
+.footer-container .footer-column a {
+  padding-bottom: 20px;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -381,6 +471,10 @@ a {
   .populaires-cards .card-subtitle {
     font-size: 13px;
   }
+
+  .act-card img {
+    height: 200px;
+  }
 }
 
 /* Small devices (phones, less than 768px) */
@@ -418,13 +512,34 @@ a {
   .right-container a:active,
   .right-container a:focus,
   .right-container a:focus:visited {
-    border-bottom-color: blue;
-    border-top: transparent;
+    border-bottom-color: #0065fc;
+    border-top-color: transparent;
   }
 
   body,
   .main-container {
     padding: 0;
+  }
+
+  form {
+    display: flex;
+    width: 100%;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .info-group .search-bar .submit {
+    display: none;
+  }
+
+  .info-group .search-bar .submit-mobile {
+    background-color: #0065fc; /* Right part background color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: contents;
   }
 
   .filter-bar .filter-container {
@@ -436,6 +551,21 @@ a {
   .filter-bar .filter-container .filter-button {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
+    width: 100%;
+  }
+
+  .filter-bar .filter-container .filter-button .filter {
+    flex-basis: calc((100% - 10px) / 2);
+    display: flex;
+  }
+  .act-card img {
+    height: 140;
+  }
+
+  .info-group {
+    padding: 0px 20px 0px 20px;
   }
 }
