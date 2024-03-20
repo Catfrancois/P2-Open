@@ -120,10 +120,14 @@ header .left-container .logo-booki {
 .repere-container {
   justify-content: center;
   align-items: center;
-  padding: 13px;
+  padding: 15px 14px 14px 14px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   background: #f2f2f2;
+}
+
+.repere-container i {
+  color: #000000;
 }
 
 .search-bar input {
@@ -154,6 +158,7 @@ header .left-container .logo-booki {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .info-group .search-bar .submit-mobile {
@@ -210,6 +215,14 @@ header .left-container .logo-booki {
   background-color: white;
 }
 
+.filter-bar .filter-container .filter-button .filter:hover {
+  background-color: #deebff;
+}
+/* a faire pour pouvoir select*/
+.filter-bar .filter-container .filter-button .filter:selected {
+  background-color: #deebff;
+}
+
 .filter-bar .filter-container .filter-button .filter h3 {
   font-family: "Raleway";
   font-weight: 700;
@@ -221,10 +234,16 @@ header .left-container .logo-booki {
   gap: 10px;
 }
 
+.infobar i {
+  padding: 10px;
+  border: 1px solid;
+  border-color: #d9d9d9;
+  border-radius: 50%;
+}
+
 .infobar .p {
   margin: 0px;
 }
-/*    TO DO  */
 
 a {
   color: inherit;
@@ -297,15 +316,11 @@ a {
 }
 
 .hebergements-cards .card {
-  height: 100%;
   display: flex;
   gap: 4px;
   flex-direction: column;
   padding: 5px 5px 15px 5px;
-}
-
-.hebergements-cards a {
-  flex-basis: calc((100% - 60px) / 3);
+  flex-basis: calc((100% - 90px) / 3);
 }
 
 .hebergements-cards img {
@@ -313,6 +328,7 @@ a {
   height: 124px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  padding-bottom: 5px;
 }
 
 .hebergements-cards .card .card-content {
@@ -320,12 +336,6 @@ a {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-.hebergements-cards .card .card-content .stars {
-  width: 81px;
-  height: 13px;
-  border-radius: unset;
 }
 
 .hebergements-cards .card-title {
@@ -386,10 +396,8 @@ a {
   margin: 0;
 }
 
-.populaires-cards .stars {
+.populaires-cards .card-rating {
   margin-bottom: 5px;
-  height: 12px;
-  width: 68px;
 }
 
 .button-afficherPlus {
@@ -436,6 +444,8 @@ a {
   background-color: white;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  display: flex;
+  flex-direction: column;
 }
 
 .act-card img {
@@ -447,7 +457,8 @@ a {
 .act-card h3 {
   font-family: "Raleway";
   font-weight: 700;
-  padding: 0px 20px 20px 20px;
+  padding: 20px 19px 20px 19px;
+  margin: 0px;
 }
 /* ///////  FOOTER \\\\\\\ */
 
@@ -464,6 +475,8 @@ a {
   flex-basis: calc(100% / 3);
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  gap: 15px;
 }
 
 .footer-container .footer-column h3 {
@@ -513,11 +526,6 @@ a {
 
   .populaires-cards .card {
     margin: 0px;
-  }
-
-  .populaires .stars {
-    border-radius: unset;
-    object-fit: cover;
   }
 
   .populaires-cards a {
@@ -605,12 +613,17 @@ a {
     color: #fff;
     cursor: pointer;
     padding: 15px 16px 15px 16px;
-    height: 49px;
+    height: 48px;
     width: 49px;
     background-color: #0065fc;
     border-radius: 15px;
     border-width: 0px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    align-items: center;
+  }
+  .info-group .search-bar .submit-mobile i {
+    color: #ffffff;
   }
 
   .filter-bar .filter-container {
@@ -689,9 +702,6 @@ a {
 
   .hebergements-cards img {
     padding-bottom: 5px;
-  }
-  .hebergements-cards .stars {
-    padding-bottom: 0px;
   }
 
   .hebergements {
