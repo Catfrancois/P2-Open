@@ -134,6 +134,7 @@ header .left-container .logo-booki {
   border-top-color: #f2f2f2;
   border-bottom-color: #f2f2f2;
   outline: none;
+  font-weight: bold;
 }
 
 .search {
@@ -199,10 +200,6 @@ header .left-container .logo-booki {
   font-weight: 700;
 }
 
-.filter-bar h4 {
-  display: none;
-}
-
 .filter-bar .filter-container .filter-button .filter {
   display: flex;
   height: 50px;
@@ -218,12 +215,8 @@ header .left-container .logo-booki {
 .filter-bar .filter-container .filter-button .filter:hover {
   background-color: #deebff;
 }
-/* a faire pour pouvoir select*/
-.filter-bar .filter-container .filter-button .filter:selected {
-  background-color: #deebff;
-}
 
-.filter-bar .filter-container .filter-button .filter h3 {
+.filter-bar .filter-container .filter-button .filter span {
   font-family: "Raleway";
   font-weight: 700;
 }
@@ -650,15 +643,8 @@ a {
     display: contents;
   }
 
-  .filter-bar h3 {
-    display: none;
-  }
-  .filter-bar h4 {
-    display: contents;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    font-family: "Raleway";
-    font-weight: 700;
+  .filter-bar .filter-container .filter-button .filter span {
+    font-weight: 400;
   }
 
   .act-card img {
